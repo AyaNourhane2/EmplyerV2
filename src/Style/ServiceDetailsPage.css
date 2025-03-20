@@ -1,0 +1,279 @@
+/* ServiceDetailsPage.css */
+
+/* Style général de la page */
+.service-details-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #7c5851,#4e2a06, #7a584c); /* Marron élégant */
+
+  min-height: 100vh;
+}
+
+/* Style pour le bouton de retour */
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour les cartes de menu (RestaurantCard) */
+.restaurant-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.dish-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 10px;
+  color: #555;
+}
+
+/* Style pour la modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.modal-content h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.rating-section {
+  margin-top: 20px;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.rating-stars span {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.rating-stars span.active {
+  color: #ffcc00;
+}
+
+.submit-rating,
+.validate-order,
+.close-modal {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.submit-rating:hover,
+.validate-order:hover,
+.close-modal:hover {
+  background-color: #0056b3;
+}
+
+.close-modal {
+  background-color: #dc3545;
+}
+
+.close-modal:hover {
+  background-color: #c82333;
+}
+
+/* Style pour les cartes de gym */
+.gym-services-container {
+  display: flex;
+  justify-content: center; /* Centre les cartes horizontalement */
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
+  gap: 20px; /* Espacement entre les cartes */
+  padding: 20px; /* Ajoute un peu d'espace autour des cartes */
+  max-width: 1200px; /* Limite la largeur maximale du conteneur */
+  margin: 0 auto; /* Centre le conteneur sur la page */
+}
+.gym-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+}
+
+.gym-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Style des images dans les cartes de gym */
+.gym-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #007bff;
+}
+
+/* Style du texte dans les cartes de gym */
+.gym-card h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.gym-card p {
+  font-size: 16px;
+  margin: 5px 10px;
+  color: #555;
+}
+
+/* Style des boutons dans les cartes de gym */
+.gym-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: background-color 0.2s;
+}
+
+.gym-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour le bouton "Rejoins-nous !" */
+.gym-card .join-button {
+  background-color: #28a745;
+}
+
+.gym-card .join-button:hover {
+  background-color: #218838;
+}
+/* Styles pour le bouton d'ajout de plat */
+.add-dish-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-dish-button:hover {
+  background-color: #45a049;
+}
+
+/* Styles pour le formulaire d'ajout de plat */
+.add-dish-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.add-dish-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-dish-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-dish-form button:hover {
+  background-color: #45a049;
+}

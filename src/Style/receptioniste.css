@@ -1,0 +1,149 @@
+/* receptioniste.css */
+
+/* Styles globaux pour la page du réceptionniste */
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Arial, sans-serif';
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* Conteneur principal */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px; /* Marge pour la barre latérale ouverte */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.sidebar-closed {
+  margin-left: 0;
+}
+
+/* Styles pour les boutons */
+.btn {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #3700b3;
+  transform: translateY(-2px);
+}
+
+/* Styles pour les formulaires */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Messages d'erreur ou de succès */
+.message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Détails de la réservation */
+.reservation-details {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-details h3 {
+  font-size: 1.5rem;
+  color: #6200ea;
+  margin-bottom: 15px;
+}
+
+.reservation-details p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.reservation-details p strong {
+  font-weight: bold;
+  color: #6200ea;
+}
+
+/* Styles pour le formulaire avec bordure carrée blanche */
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 2px solid #000; /* Bordure noire */
+  border-radius: 0; /* Bordure carrée */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  color: #6f13f0;
+  margin-bottom: 20px;
+  text-align: center;
+}
